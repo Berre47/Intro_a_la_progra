@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4554bcd6-c76a-401a-b685-e97755368c92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Introduction a la programation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission 4/QBF4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission 4/bioinfo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mission 5/sorted_belgian_communes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission3/flags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission3/flags_test.py" afterDir="false" />
+    <list default="true" id="4554bcd6-c76a-401a-b685-e97755368c92" name="Changes" comment="co">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,17 +100,58 @@
       <workItem from="1760625761837" duration="1510000" />
       <workItem from="1760637733282" duration="2086000" />
       <workItem from="1760736094624" duration="751000" />
-      <workItem from="1760988287120" duration="1383000" />
+      <workItem from="1760988287120" duration="1700000" />
     </task>
+    <task id="LOCAL-00001" summary="co">
+      <option name="closed" value="true" />
+      <created>1760989686911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760989686911</updated>
+    </task>
+    <task id="LOCAL-00002" summary="co">
+      <option name="closed" value="true" />
+      <created>1760989717909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760989717909</updated>
+    </task>
+    <task id="LOCAL-00003" summary="co">
+      <option name="closed" value="true" />
+      <created>1760989977774</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760989977774</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="co" />
+    <option name="LAST_COMMIT_MESSAGE" value="co" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Introduction_a_la_programation$QBF4.coverage" NAME="QBF4 Coverage Results" MODIFIED="1760689659432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mission 4" />
     <SUITE FILE_PATH="coverage/Introduction_a_la_programation$bioinfo.coverage" NAME="bioinfo Coverage Results" MODIFIED="1760353506822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mission 4" />
     <SUITE FILE_PATH="coverage/Introduction_a_la_programation$flags_test.coverage" NAME="flags_test Coverage Results" MODIFIED="1759909966487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission3" />
+    <SUITE FILE_PATH="coverage/Introduction_a_la_programation$sorted_belgian_communes.coverage" NAME="sorted_belgian_communes Coverage Results" MODIFIED="1760989571810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mission 5" />
     <SUITE FILE_PATH="coverage/Introduction_a_la_programation$flags.coverage" NAME="flags Coverage Results" MODIFIED="1760020507748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission3" />
     <SUITE FILE_PATH="coverage/Introduction_a_la_programation$Mission_2.coverage" NAME="Mission_2 Coverage Results" MODIFIED="1758880377923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
