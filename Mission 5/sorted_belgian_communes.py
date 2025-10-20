@@ -1,5 +1,5 @@
 # list of (most) Belgian communities, with coordinates according to a Mercator projection.
-
+from math import sqrt
 all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (531519.6775850406, 5659184.536941301)),\
     ("Aarschot", (629867.1340910662, 5649141.00455739)),("Aartselaar", (596785.2232017588, 5665558.287847248)),\
     ("Affligem", (578131.916279454, 5639292.55774853)),("Aiseau-Presles", (611605.8849598696, 5585675.111576218)),\
@@ -287,8 +287,22 @@ def verify_order(communes):
     return list_of_communes == sorted(list_of_communes)
 
 
+def coordinate(commune,all_commune):
+    first=0
+    last=len(all_commune)-1
+    while first <= last:
+        middle=(first+last)//2
+        if all_commune[middle][0] == commune:
+            return all_commune[middle][1]
+        else:
+            if commune < all_commune[middle][0]:
+                last=middle -1
+            else:
+                first=middle+1
 
 
-def distance(commune1,):
+print(coordinate("Namur",all_communes))
+
+def distance(commune1,commune2,all_communes):
     pass
-    pass
+
