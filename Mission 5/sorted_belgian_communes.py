@@ -291,3 +291,4 @@ def verify_order(communes):
 
 def distance(commune1,):
     pass
+    pass
