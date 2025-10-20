@@ -1,5 +1,6 @@
 # list of (most) Belgian communities, with coordinates according to a Mercator projection.
 from math import sqrt
+from random import shuffle
 all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (531519.6775850406, 5659184.536941301)),\
     ("Aarschot", (629867.1340910662, 5649141.00455739)),("Aartselaar", (596785.2232017588, 5665558.287847248)),\
     ("Affligem", (578131.916279454, 5639292.55774853)),("Aiseau-Presles", (611605.8849598696, 5585675.111576218)),\
@@ -286,6 +287,20 @@ def verify_order(communes):
     list_of_communes= [ x[0] for x in communes]
     return list_of_communes == sorted(list_of_communes)
 
+def test_verify_order():
+    list_of_communes=[x for x in all_communes]
+    communes_triee=[["Bruxelles",1],["Namur",2]]
+    assert verify_order(communes_triee)== True
+
+    shuffle(list_of_communes)
+    assert verify_order(list_of_communes) == False
+
+    communes_pas_trie=[("Namur",1),("Zwalm",2),["Bruxelles",3]]
+    assert verify_order(communes_pas_trie) == False
+
+    return "Test termininé sans échec"
+
+test_verify_order()
 
 def coordinate(commune,all_commune):
     first=0
@@ -301,7 +316,9 @@ def coordinate(commune,all_commune):
                 first=middle+1
 
 
-print(coordinate("Namur",all_communes))
+def test_coordinate():
+    pass
+
 
 def distance(commune1,commune2,all_communes):
     pass
