@@ -300,9 +300,25 @@ def coordinate(commune,all_commune):
             else:
                 first=middle+1
 
-
 print(coordinate("Namur",all_communes))
 
+
+#pre : deux communes de la liste all_communes
+#post : retourne la distance euclidienne entre deux communes
 def distance(commune1,commune2,all_communes):
-    pass
+    coord1=coordinate(commune1, all_communes)
+    coord2=coordinate(commune2, all_communes)
+    distx=(coord1[0]-coord2[0])**2
+    disty=(coord1[1]-coord2[1])**2
+    print (sqrt(distx+disty))
+
+
+#pre : une list de communes de all_communes
+#post : retourn la distance du tour des communes en revant à la première
+def tour_distance(communes,all_communes):
+    tour=0,0
+    for i in range (len(all_communes)-1):
+        tour+=distance(communes[i],communes[i+1],all_communes)
+    tour+=distance(communes[len(communes)],communes[0],all_communes)
+    return tour
 
