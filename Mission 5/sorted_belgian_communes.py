@@ -323,7 +323,7 @@ def distance(commune1,commune2,all_communes):
     coord2=coordinate(commune2, all_communes)
     distx=(coord1[0]-coord2[0])**2
     disty=(coord1[1]-coord2[1])**2
-    print (sqrt(distx+disty))
+    return sqrt(distx+disty)
 
 
 #pre : une list de communes de all_communes
