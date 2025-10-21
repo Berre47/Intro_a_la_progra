@@ -286,6 +286,13 @@ def verify_order(communes):
     list_of_communes= [ x[0] for x in communes]
     return list_of_communes == sorted(list_of_communes)
 
+#pre :
+#post : test def verify_order(communes) avec deux listes et la liste donnée
+def test_verify_order():
+    assert verify_order([("aa"), ("ab"), ("ac"), ("ad"), ("ae")]), '[("aa"), ("ab"), ("ac"), ("ad"), ("ae")]'+" est triée"
+    assert not verify_order([("aa"), ("ab"), ("az"), ("ad"), ("ae")]), '[("aa"), ("ab"), ("az"), ("ad"), ("ae")]'+" n'est pas triée"
+    assert verify_order(all_communes), "La liste donnée est triée"
+
 
 def coordinate(commune,all_commune):
     first=0
@@ -300,8 +307,12 @@ def coordinate(commune,all_commune):
             else:
                 first=middle+1
 
-print(coordinate("Namur",all_communes))
-
+#pre : 
+#post : test def coordinate(commune,all_communes)
+def test_coordinate():
+    assert coordinate("Namur", all_communes)!=None, "les coordinates de Namur sont (632749.6391841022, 5592639.188943688) "
+    assert coordinate("Boom", all_communes)!=None, "les coordinates de Boom sont (595727.0648659591, 5659976.623374548)"
+    assert coordinate("Paris", all_communes)==None, "Paris n'est pas dans la liste"
 
 #pre : deux communes de la liste all_communes
 #post : retourne la distance euclidienne entre deux communes
@@ -319,6 +330,6 @@ def tour_distance(communes,all_communes):
     tour=0,0
     for i in range (len(all_communes)-1):
         tour+=distance(communes[i],communes[i+1],all_communes)
-    tour+=distance(communes[len(communes)],communes[0],all_communes)
+    tour+=distance(communes[len(communes)],communes[0],all_communes) #pour faire la boucle
     return tour
 
