@@ -284,10 +284,18 @@ all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (53
 
 
 def verify_order(communes):
+    """
+    pre : prend un argument commune qui est une liste
+    post : retourne Vrai si la liste est dans l'ordre au sinon elle retourne faux
+    """
     list_of_communes= [ x[0] for x in communes]
     return list_of_communes == sorted(list_of_communes)
 
 def test_verify_order():
+    """"
+    Test pour vérifier la fonction verify_order
+    """
+
     list_of_communes=[x for x in all_communes]
     communes_triee=[["Bruxelles",1],["Namur",2]]
     assert verify_order(communes_triee)== True
@@ -298,11 +306,16 @@ def test_verify_order():
     communes_pas_trie=[("Namur",1),("Zwalm",2),["Bruxelles",3]]
     assert verify_order(communes_pas_trie) == False
 
-    return "Test termininé sans échec"
+    return "Test termininé sans problème"
 
-test_verify_order()
+
 
 def coordinate(commune,all_commune):
+    """"
+    Pré : commune est un string et all_communes est une listes de tuple avec une communes et leur coordonné
+
+    Post: retourne la coordonnée de la commune
+    """
     first=0
     last=len(all_commune)-1
     while first <= last:
@@ -314,12 +327,82 @@ def coordinate(commune,all_commune):
                 last=middle -1
             else:
                 first=middle+1
-
+    return None
 
 def test_coordinate():
-    pass
+    """
+    Test pour tester la fonction coordinate
+    """
+
+    assert  coordinate("Wanze", all_communes) == (655466.7407699178, 5601773.093690348)
+    assert coordinate("Nieuwpoort",all_communes) == (483674.4555490357, 5664062.764837557)
+    assert coordinate("CommuneInventée", all_communes) is None
+
+
+    return "Test termininé sans problème"
 
 
 def distance(commune1,commune2,all_communes):
-    pass
+    """"
+    pre:  commune1 et commune2 sont des strings et all_communes est une listes de tuple avec une communes et leur coordonné
+    post: retourne la distance totale euclidinne entre les deux communes
+    """
+
+    coord1=coordinate(commune1,all_communes)
+    coord2=coordinate(commune2,all_communes)
+    if coord1 is None or coord2 is None:
+        return None
+
+    x1, y1 = coord1
+    x2, y2 = coord2
+
+    return sqrt((x2 -x1)**2 + (y2 - y1)**2)
+
+def test_distance():
+    """
+    Test pour testé la fonction distance
+    """
+    d1 = distance("Bruxelles", "Namur", all_communes)
+    d2 = distance("Namur", "Liège", all_communes)
+    assert d1 is not None and d1 == 55212.58770961706
+    assert d2 is not None and d2 == 54714.394268077
+    assert distance("Bruxelles", "CommuneInventée", all_communes) == None
+
+    return "Test termininé sans problème"
+
+
+def tour_distance(communes,all_communes):
+    """
+    Pré:communes est un string avec le nom d'une commune et all_communes est une listes de tuple avec une communes et leur coordonné
+    Post: retourne la distance totale de la tournée
+
+    """
+    if len(communes) < 2:
+        return 0.0
+
+    distance_totale = 0.0
+
+    for i in range(len(communes) - 1):
+        d = distance(communes[i], communes[i + 1], all_communes)
+        if d is not None:
+            distance_totale += d
+
+    d_retour = distance(communes[-1], communes[0], all_communes)
+    if d_retour is not None:
+        distance_totale += d_retour
+
+    return distance_totale
+
+def test_tour_distance():
+    """"
+    Test pour tester la fonction tour_distance()
+    """
+    communes = ["Namur", "Liège", "Bruxelles"]
+    total = tour_distance(communes, all_communes)
+    assert total > 0
+
+    assert tour_distance(["Namur"], all_communes) == 0.0
+    assert tour_distance(["Namur", "Liège","Bruxelles"], all_communes) == 109428.788536154
+
+    return "Test termininé sans problème"
 
