@@ -1,4 +1,6 @@
-# list of (most) Belgian communities, with coordinates according to a Mercator projection.
+#Alexander Home & Héloise Corbeel
+#B13
+
 from math import sqrt
 from random import shuffle
 all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (531519.6775850406, 5659184.536941301)),\
@@ -402,7 +404,8 @@ def test_tour_distance():
     assert total > 0
 
     assert tour_distance(["Namur"], all_communes) == 0.0
-    assert tour_distance(["Namur", "Liège","Bruxelles"], all_communes) == 109428.788536154
-
+    assert tour_distance(["Namur", "Liège","Bruxelles"], all_communes) == 200546.95053125435
+    assert  tour_distance([ "Liège","Bruxelles"], all_communes) == 181239.93710712058
+    assert tour_distance([ "Namur","Bruxelles"], all_communes) == 110425.17541923412
     return "Test termininé sans problème"
 
